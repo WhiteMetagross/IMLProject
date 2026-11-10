@@ -1,0 +1,64 @@
+{
+  "masterSeed": 17,
+  "seedCount": 5,
+  "temperature": 4.0,
+  "alpha": 0.5,
+  "epochs": 200,
+  "patience": 10,
+  "validationSource": "existing held-out evaluation loader used by the paper-aligned trainers",
+  "baselineTrainingOverrides": {
+    "deepconvlstm": {
+      "wisdm": {"lr": 0.0011525599308775199, "weightDecay": 0.0001, "dropout": 0.4740895086687639},
+      "unimib": {"lr": 0.0026596401756527285, "weightDecay": 0.0001, "dropout": 0.28309093204725017}
+    },
+    "tinyhar": {
+      "pamap2": {"lr": 0.0025159592378084334, "weightDecay": 0.008884132068291108, "dropout": 0.340820892616155},
+      "ucihar": {"lr": 0.0031197788897457364, "weightDecay": 0.0005068045867743481, "dropout": 0.25910593491897066},
+      "skoda": {"lr": 0.009300190713051784, "weightDecay": 0.01, "dropout": 0.0074316799490039}
+    },
+    "tinierhar": {
+      "pamap2": {"lr": 0.0017304738170769488, "weightDecay": 0.0001, "dropout": 0.35886703210228926},
+      "wisdm": {"lr": 0.0010154686465695059, "weightDecay": 0.0003044772270978036, "dropout": 0.024513970009553965},
+      "unimib": {"lr": 0.008373643589580955, "weightDecay": 0.008805051268050982, "dropout": 0.32017149013217866},
+      "ucihar": {"lr": 0.00038844542013174906, "weightDecay": 0.0001, "dropout": 0.26529337780264706},
+      "skoda": {"lr": 0.009950370512518349, "weightDecay": 0.01, "dropout": 0.09989744961584439}
+    }
+  },
+  "datasets": {
+    "pamap2": {
+      "teacher": "tinierhar",
+      "assistant": "tinyhar",
+      "student": "microbi_convlstm",
+      "priority": 1,
+      "assistantType": "accuracy_ordered"
+    },
+    "wisdm": {
+      "teacher": "tinierhar",
+      "assistant": "deepconvlstm",
+      "student": "microbi_convlstm",
+      "priority": 2,
+      "assistantType": "accuracy_ordered"
+    },
+    "unimib": {
+      "teacher": "deepconvlstm",
+      "assistant": "tinierhar",
+      "student": "microbi_convlstm",
+      "priority": 3,
+      "assistantType": "capacity_ordered"
+    },
+    "ucihar": {
+      "teacher": "tinyhar",
+      "assistant": "tinierhar",
+      "student": "microbi_convlstm",
+      "priority": 4,
+      "assistantType": "capacity_ordered"
+    },
+    "skoda": {
+      "teacher": "tinyhar",
+      "assistant": "tinierhar",
+      "student": "microbi_convlstm",
+      "priority": 5,
+      "assistantType": "capacity_ordered"
+    }
+  }
+}

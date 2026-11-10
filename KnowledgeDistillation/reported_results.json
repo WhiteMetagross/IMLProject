@@ -1,0 +1,50 @@
+{
+  "protocol": {
+    "masterSeed": 17,
+    "seedCount": 5,
+    "seeds": [
+      1591207480,
+      1814784297,
+      230512677,
+      345687080,
+      983484580
+    ],
+    "temperature": 4.0,
+    "alpha": 0.5,
+    "epochs": 200,
+    "patience": 10,
+    "metric": "held-out macro F1"
+  },
+  "results": {
+    "pamap2": {
+      "baseStudent": {"mean": 0.6501991272999635, "std": 0.020986392463810895},
+      "directStudent": {"mean": 0.6772594953153742, "std": 0.033336455679619265},
+      "distilledAssistant": {"mean": 0.7870751616406816, "std": 0.022234107356652943},
+      "assistantStudent": {"mean": 0.635808875591576, "std": 0.03776474199161155}
+    },
+    "wisdm": {
+      "baseStudent": {"mean": 0.8087051655068029, "std": 0.027143701960992455},
+      "directStudent": {"mean": 0.7988648022561392, "std": 0.012938740606531255},
+      "distilledAssistant": {"mean": 0.8402008724981643, "std": 0.0025663034254937126},
+      "assistantStudent": {"mean": 0.8082293369725223, "std": 0.024294856832730836}
+    },
+    "unimib": {
+      "baseStudent": {"mean": 0.7922784403053134, "std": 0.05800997489175959},
+      "directStudent": {"mean": 0.8056042615706897, "std": 0.027939823920994925},
+      "distilledAssistant": {"mean": 0.7896868365163934, "std": 0.017622802873374876},
+      "assistantStudent": {"mean": 0.794201309393846, "std": 0.021225649431374054}
+    },
+    "ucihar": {
+      "baseStudent": {"mean": 0.9300673292349737, "std": 0.006292001646572341},
+      "directStudent": {"mean": 0.9278989808908096, "std": 0.0031507391865094637},
+      "distilledAssistant": {"mean": 0.9502560977972939, "std": 0.009009792691456898},
+      "assistantStudent": {"mean": 0.9323709866772312, "std": 0.00265457140063503}
+    },
+    "skoda": {
+      "baseStudent": {"mean": 0.9666582026037622, "std": 0.009064282793270154},
+      "directStudent": {"mean": 0.9722449281921832, "std": 0.0075786252969142565},
+      "distilledAssistant": {"mean": 0.9848101807880724, "std": 0.00493920826749158},
+      "assistantStudent": {"mean": 0.9639755024376477, "std": 0.00951761273296195}
+    }
+  }
+}
