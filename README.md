@@ -4,13 +4,14 @@ This repository contains the code, result records, figures plus LaTeX source use
 
 ## Team:
 
-- Group Number: 14.
-- Team Members:
+Group Number: 14.
 
-  1. IIB2024017, Mridankan Mandal.
-  2. IIB2024001, Aditya Pachauri.
-  3. IIB2024033, Dhannu Ram Meena.
-  4. IIB2024012, Ankit Ekka.
+### Team Members:
+
+1. IIB2024017, Mridankan Mandal.
+2. IIB2024001, Aditya Pachauri.
+3. IIB2024033, Dhannu Ram Meena.
+4. IIB2024012, Ankit Ekka.
 
 ## Report:
 
